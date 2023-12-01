@@ -5,7 +5,9 @@ const WebsiteLayout = () => {
   return (
     <div>
       <Navbar />
-      <Outlet />
+      <main style={{ minHeight: "400px" }}>
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );

@@ -24,3 +24,19 @@ h5,
 h6 {
   color: $headingColor;
 }
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+
+  @include lg {
+    font-size: 24px;
+  }
+
+  @include md {
+    font-size: 20px;
+  }
+  .name {
+    color: $primaryColor;
+  }
+}

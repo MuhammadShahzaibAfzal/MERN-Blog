@@ -32,7 +32,10 @@ const Navbar = () => {
           <Link to="/">Home</Link>
           <div className="dropdownWrapper">
             <Link
-              onClick={() => {
+              onMouseEnter={() => {
+                setIsDropdownOpen(!isDropdownOpen);
+              }}
+              onMouseDown={() => {
                 setIsDropdownOpen(!isDropdownOpen);
               }}
             >
