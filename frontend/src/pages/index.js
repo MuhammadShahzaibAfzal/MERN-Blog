@@ -1,5 +1,5 @@
-export { default as About } from "./About";
-export { default as CategoryPosts } from "./CategoryPosts";
-export { default as Contact } from "./Contact";
-export { default as Home } from "./Home";
-export { default as PostDetail } from "./PostDetail";
+export { default as About } from "./about/About";
+export { default as CategoryPosts } from "./categoryposts/CategoryPosts";
+export { default as Contact } from "./contact/Contact";
+export { default as Home } from "./home/Home";
+export { default as PostDetail } from "./postdetail/PostDetail";
