@@ -5,11 +5,20 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow-x: hidden;
   padding: 15px 40px;
   border-bottom: 1px solid $grayColor;
   .logo {
     font-size: 28px;
     font-weight: bold;
+
+    @include lg {
+      font-size: 24px;
+    }
+
+    @include md {
+      font-size: 20px;
+    }
     .name {
       color: $primaryColor;
     }
@@ -24,46 +33,21 @@ nav {
       font-weight: 500;
       text-decoration: none;
       transition: $default-transition;
+
+      @include lg {
+        font-size: 16px;
+      }
+
+      @include md {
+        font-size: 15px;
+      }
       &:hover {
         color: $primaryColor;
       }
     }
 
-    .dropdownWrapper {
-      position: relative;
-      a {
-        display: flex;
-        column-gap: 4px;
-        .arrowIcon {
-          width: 16px;
-        }
-      }
-
-      .dropdown {
-        position: absolute;
-        flex-direction: column;
-        background-color: $grayColor;
-        row-gap: 10px;
-        width: 300px;
-        border-radius: 10px;
-        top: 70px;
-        left: -100px;
-        z-index: 111;
-        max-height: 0px;
-        transition: $default-transition;
-        padding: 10px 30px;
-        overflow-y: hidden;
-        display: none;
-
-        a {
-          font-size: 16px;
-        }
-      }
-      .dropdownActive {
-        max-height: fit-content;
-        // padding: 10px 30px;
-        display: flex;
-      }
+    @include md {
+      display: none;
     }
   }
 
@@ -74,6 +58,10 @@ nav {
     width: 300px;
     display: flex;
     align-items: center;
+
+    @include sm {
+      display: none;
+    }
     input {
       outline: none;
       width: 95%;
@@ -84,5 +72,99 @@ nav {
       width: 20px;
       height: 20px;
     }
+  }
+
+  .hamburgerWrapper {
+    display: none;
+
+    @include md {
+      display: block;
+    }
+    .hamburgerIcon {
+      width: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+.mobileNavbarWrapper {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transform: translateX(100%);
+  transition: $default-transition;
+
+  .mobileNavbarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+
+    a {
+      font-size: 20px;
+      color: $textColor;
+      text-decoration: none;
+    }
+
+    .closeIcon {
+      position: absolute;
+      width: 20px;
+      right: 20px;
+      top: 20px;
+    }
+  }
+}
+
+.mobileNavbarWrapperActive {
+  transform: translateX(0);
+  display: flex;
+}
+
+.dropdownWrapper {
+  position: relative;
+  a {
+    display: flex;
+    column-gap: 4px;
+    .arrowIcon {
+      width: 16px;
+    }
+  }
+  .dropdown {
+    position: absolute;
+    flex-direction: column;
+    background-color: $grayColor;
+    row-gap: 10px;
+    width: 300px;
+    border-radius: 10px;
+    top: 70px;
+    left: -100px;
+    z-index: 111;
+    max-height: 0px;
+    transition: $default-transition;
+    padding: 10px 30px;
+    overflow-y: hidden;
+    display: none;
+
+    a {
+      font-size: 16px;
+    }
+
+    @include md {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .dropdownActive {
+    max-height: fit-content;
+    // padding: 10px 30px;
+    display: flex;
   }
 }
