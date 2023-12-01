@@ -25,6 +25,16 @@ h6 {
   color: $headingColor;
 }
 
+.badge {
+  padding: 5px;
+  border-radius: 4px;
+  color: white;
+}
+
+.badgeGreen {
+  background-color: $success-color;
+}
+
 .logo {
   font-size: 28px;
   font-weight: bold;

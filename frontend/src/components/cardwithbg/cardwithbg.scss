@@ -1,0 +1,45 @@
+@import "../../scss/variables.scss";
+@import "../../scss/responsive.scss";
+.cardWithBgContainer {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 20px;
+  width: 100%;
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: 0;
+  }
+
+  .top {
+    color: white;
+    margin: 10px 0;
+    z-index: 11;
+    span {
+      margin: 3px;
+    }
+  }
+
+  .heading {
+    color: white;
+    z-index: 111;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: $default-transition;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
