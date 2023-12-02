@@ -1,0 +1,21 @@
+@import "../../scss/variables.scss";
+@import "../../scss/responsive.scss";
+
+.listItemWrapper {
+  display: flex;
+  //   align-items: center;
+  column-gap: 10px;
+
+  img {
+    width: 120px;
+  }
+
+  .title {
+    color: $textColor;
+    text-decoration: none;
+    font-size: 20px;
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+}

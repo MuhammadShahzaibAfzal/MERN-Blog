@@ -1,4 +1,4 @@
-import { CardWithBg, PostCard } from "../../components";
+import { CardWithBg, ListItem, PostCard } from "../../components";
 import "./home.scss";
 const posts = [
   {
@@ -24,12 +24,27 @@ const Home = () => {
         <CardWithBg post={posts[1]} />
       </div>
 
+      <h1 className="sectionHeading">Recents Posts</h1>
       <div className="postsWrapper">
         <PostCard post={posts[0]} />
         <PostCard post={posts[1]} />
         <PostCard post={posts[1]} />
         <PostCard post={posts[0]} />
         <PostCard post={posts[1]} />
+        <PostCard post={posts[1]} />
+        <PostCard post={posts[0]} />
+        <PostCard post={posts[1]} />
+      </div>
+
+      <div className="mostReadWrapper">
+        <CardWithBg post={posts[0]} />
+        <div className="sidebar">
+          <h1>Most Read</h1>
+          <ListItem post={posts[0]} />
+          <ListItem post={posts[1]} />
+          <ListItem post={posts[0]} />
+          <ListItem post={posts[1]} />
+        </div>
       </div>
     </div>
   );
