@@ -1,0 +1,26 @@
+.aboutWrapper {
+  padding: 30px;
+  text-align: center;
+  .profileWrapper {
+    margin: 20px auto;
+    text-align: center;
+    img {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+    }
+  }
+  h2 {
+    margin: 10px 0;
+  }
+  li {
+    list-style: none;
+  }
+  p {
+    line-height: 2rem;
+  }
+  .name {
+    font-style: italic;
+    font-weight: bold;
+  }
+}

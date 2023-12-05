@@ -1,0 +1,41 @@
+.singlePostWrapper {
+  .hero {
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+      z-index: 0;
+    }
+    .top {
+      color: white;
+      z-index: 11;
+      padding: 10px 30px;
+      span {
+        margin: 3px;
+      }
+    }
+
+    h1 {
+      color: white;
+      z-index: 1111;
+      padding: 10px 30px;
+    }
+  }
+  .contentWrapper {
+    padding: 30px;
+    p {
+      line-height: 2rem;
+      font-size: 18px;
+    }
+  }
+}
